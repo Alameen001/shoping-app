@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shopx/presentaion/screens/My%20Adress/Adress_screen.dart';
 import 'package:shopx/presentaion/screens/cart/widgets/cart_items.dart';
-import 'package:shopx/presentaion/widgets/user_adress.dart';
+import 'package:shopx/presentaion/screens/My%20Adress/user_adress.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({Key? key}) : super(key: key);
@@ -59,7 +60,7 @@ class CartScreen extends StatelessWidget {
                   ],
                 ),
                 ElevatedButton(onPressed: (){
-                  Get.to(UserAdressScreen());
+                  Get.to(AdressScreen());
                 }, child: Text("Proceed TO Pay"))
               ],
             ),

@@ -3,8 +3,9 @@
 import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
 import 'package:get/get.dart';
+import 'package:shopx/presentaion/screens/My%20Adress/Adress_screen.dart';
 
-import 'package:shopx/presentaion/widgets/user_adress.dart';
+import 'package:shopx/presentaion/screens/My%20Adress/user_adress.dart';
 
 class ProductDetail extends StatelessWidget {
   const ProductDetail({Key? key}) : super(key: key);
@@ -269,7 +270,7 @@ class ProductDetail extends StatelessWidget {
                               width: MediaQuery.of(context).size.width * 0.55,
                               child: ElevatedButton.icon(
                                 onPressed: () {
-                                  Get.to(UserAdressScreen());
+                                  Get.to(AdressScreen());
                                 },
                                 icon: Icon(
                                   CupertinoIcons.bag,

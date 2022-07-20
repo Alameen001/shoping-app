@@ -8,7 +8,7 @@ import 'package:shopx/presentaion/screens/Home/home_screen.dart';
 import 'package:shopx/presentaion/screens/Home/widget/appbar.dart';
 import 'package:shopx/presentaion/screens/Login/SignUp.dart';
 import 'package:shopx/presentaion/widgets/TextForm/textform.dart';
-import 'package:shopx/presentaion/widgets/user_adress.dart';
+import 'package:shopx/presentaion/screens/My%20Adress/user_adress.dart';
 
 class LoginScreen extends StatefulWidget {
   LoginScreen({Key? key}) : super(key: key);

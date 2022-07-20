@@ -81,61 +81,7 @@ class PaymentScreen extends StatelessWidget {
                     SizedBox(
                       height: 15,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: StreamBuilder<QuerySnapshot<Map<String,dynamic>>>(
-                          stream: FirebaseFirestore.instance
-                              .collection('address')
-                              .where('userID',
-                                  isEqualTo: firebaseAuth.currentUser!.uid)
-                              .snapshots(),
-                          builder: (context, AsyncSnapshot<QuerySnapshot<Map<String, dynamic>>> snapshot) {
-                            if (snapshot.hasData) {
-                              // print(snapshot.data.docs.length);
-                              if (snapshot.data!.docs.length > 0) {
-                                return ListView.builder(
-                                  shrinkWrap: true,
-                                  physics: NeverScrollableScrollPhysics(),
-                                  itemCount: snapshot.data!.docs.length,
-                                  itemBuilder: (context, index) {
-                                    AdressModel adress = AdressModel.fromJson(
-                                      snapshot.data!.docs[index].data()
-                                    );
-                                    print(firebaseAuth.currentUser!.uid);
-                                    return Card(
-                                      color: Colors.white,
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(13.0),
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                      
-                                            Text(adress.name),
-                                            Text(adress.phoneno),
-                                            // Text(adress.pincode),
-                                            Text(adress.city),
-                                            Text(adress.state),
-                                            Text(adress.loacality),
-                                            Text(adress.buildingnmae),
-                                            Text(adress.landmark),
-                                          ],
-                                        ),
-                                      ),
-                                    );
-                                  },
-                                );
-                              } else {
-                                return Center(
-                                  child: Text("No Adress Available"),
-                                );
-                              }
-                            }
-                            return SizedBox();
-                          }),
-                    ),
+                   
                   ],
                 )
               ],
